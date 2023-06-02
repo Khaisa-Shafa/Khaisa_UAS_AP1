@@ -39,7 +39,7 @@ int main()
                 newItem.isDone = false;
 
                 myList.push_back(newItem);
-                cout << "\nTask saved successfully! " << endl;
+                cout << "\nList saved successfully! " << endl;
             
             continue;
         }
@@ -49,7 +49,7 @@ int main()
             cout << "\nToDo List : " << endl;
             if (myList.empty()) 
             {
-                cout << "No tasks." << endl;
+                cout << "No lists." << endl;
             }
             else 
             {
@@ -67,7 +67,7 @@ int main()
                     << (now->tm_year + 1900) << "\n";
                 }
             }
-            cout << "\nnumber of tasks : " << myList.size() << endl;
+            cout << "\nnumber of lists : " << myList.size() << endl;
             continue;  
         }   
     
@@ -78,7 +78,7 @@ int main()
             if (num >= 1 && num <= myList.size()) 
             {
                 myList.erase(myList.begin() + num - 1);
-                cout << "Task deleted successfully!" << endl;
+                cout << "List deleted successfully!" << endl;
             } 
             else 
             {
@@ -94,11 +94,11 @@ int main()
             if (taskIndex > 0 && taskIndex <= myList.size()) 
             {
                 myList[taskIndex - 1].isDone = !myList[taskIndex - 1].isDone;
-                cout << "Task status updated successfully!" << endl;
+                cout << "List status updated successfully!" << endl;
             }
             else 
             {
-                cout << "Invalid task number." << endl;
+                cout << "Invalid list number." << endl;
             }
             continue;
         }
@@ -110,7 +110,7 @@ int main()
 
         else 
         {
-            cout << "\nInvalid number. Try again." << endl;
+            cout << "\nInvalid input. Try again." << endl;
             continue;
         }
         return 0;
